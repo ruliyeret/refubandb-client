@@ -1,0 +1,88 @@
+.review-preview {
+	.user {
+		display: flex;
+		align-items: center;
+
+		img {
+			width: 55px;
+			height: 55px;
+			object-fit: cover;
+			border-radius: 50%;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
+		div {
+			margin-right: 10px;
+
+			h2 {
+				font-size: 1.1rem;
+				margin-top: -9px;
+				text-overflow: ellipsis;
+			}
+
+			p {
+				color: #777;
+				font-size: 0.7rem;
+				text-overflow: ellipsis;
+			}
+		}
+		.review-name {
+			font-weight: 500;
+			color: #000;
+			font-size: 0.8rem;
+		}
+	}
+	p.txt {
+		font-weight: 300;
+		color: #222;
+		line-height: 1.4;
+		font-size: 0.8rem;
+		text-overflow: ellipsis;
+	}
+}
+
+@include for-mobile-layout {
+	.review-preview {
+		border: 1px solid rgb(221, 221, 221);
+		padding: 16px;
+		margin-right: 10px;
+		border-radius: 15px;
+		height: 230px;
+		max-width: 85%;
+
+		.user {
+			display: flex;
+			align-items: flex-start;
+
+			img {
+				width: 40px;
+				height: 40px;
+				object-fit: cover;
+				border-radius: 50%;
+				margin-right: 7px;
+				margin-bottom: 10px;
+			}
+
+			div {
+				width: 220px;
+
+				p {
+					color: rgb(113, 113, 113);
+					font-size: 14px;
+				}
+			}
+			.review-name {
+				font-size: 16px;
+				color: rgb(34, 34, 34);
+				font-weight: 600;
+			}
+		}
+		p.txt {
+			font-weight: 300;
+			color: rgb(34, 34, 34);
+			line-height: 24px;
+			font-size: 16px;
+		}
+	}
+}

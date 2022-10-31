@@ -1,0 +1,21 @@
+.user-wishlist-container {
+  display: none;
+  min-height: 85vh;
+  margin-top: 105px;
+  h2 {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
+
+@include for-mobile-layout {
+  .user-wishlist-container {
+    min-height: 85vh;
+    h2 {
+      margin-top: 25px;
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+  }
+}

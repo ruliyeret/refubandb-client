@@ -1,0 +1,36 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 90vh;
+}
+
+.homepage,
+.stay-details,
+.user-profile-container {
+  min-height: 85vh;
+}
+
+.explore {
+  padding-top: 130px;
+}
+
+.main-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 100;
+  & > div {
+    border: 3px solid #fff;
+  }
+}
+
+@include for-mobile-layout {
+  .explore {
+    padding-top: 100px;
+  }
+}

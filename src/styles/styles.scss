@@ -1,0 +1,55 @@
+// SETUP //
+@import 'setup/functions';
+@import 'setup/mixins';
+@import 'setup/typography';
+@import 'setup/variables';
+
+// BASIC //
+@import 'basic/base';
+@import 'basic/helpers';
+@import 'basic/layout';
+
+// COMPONENTS //
+
+// app
+@import 'cmps/app/app-header';
+@import 'cmps/app/app-footer';
+@import 'cmps/app/login';
+@import 'cmps/app/signup';
+@import 'cmps/app/user-msg';
+@import 'cmps/app/stay-filter';
+@import 'cmps/app/share-modal';
+@import 'cmps/app/mobile-nav';
+@import 'cmps/app/about';
+
+// homepage
+@import 'cmps/homepage/date-picker.scss';
+
+//list
+@import 'cmps/list/stay-list';
+@import 'cmps/list/stay-preview';
+
+//details
+@import 'cmps/details/review-list';
+@import 'cmps/details/review-preview';
+@import 'cmps/details/stay-map';
+@import 'cmps/details/chat';
+@import 'cmps/details/stay-checkout';
+@import 'cmps/details/review-add';
+@import 'cmps/details/review-ratings';
+@import 'cmps/details/mobile-checkout';
+
+// profile
+@import 'cmps/profile/filter-orders';
+@import 'cmps/profile/profile-table';
+@import 'cmps/profile/profile-stay-table';
+@import 'cmps/profile/stay-add';
+@import 'cmps/profile/dashboard';
+@import 'cmps/profile/inbox';
+
+// VIEWS //
+@import 'views/app';
+@import 'views/homepage';
+@import 'views/stay-details';
+@import 'views/user-profile';
+@import 'views/user-wishlist';

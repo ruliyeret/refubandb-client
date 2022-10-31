@@ -1,0 +1,285 @@
+.filter-container {
+  letter-spacing: 0.8px;
+  width: 90%;
+  max-width: 850px;
+  background-color: #fff;
+  height: 65px;
+  border-radius: 5rem;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.15), 0px 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s 0.1s;
+  &.opensearch {
+    button {
+      width: 100px;
+      border-radius: 3rem;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: 500;
+      font-size: 0.8rem;
+
+      p {
+        display: block;
+      }
+    }
+  }
+
+  &.scrolled {
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+    width: 200px;
+    opacity: 0;
+    transition: 0.3s;
+    & form {
+      & div,
+      input {
+        width: 10%;
+      }
+    }
+  }
+
+  & form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    & small {
+      font-weight: 600;
+      font-size: 0.6rem;
+      line-height: 1rem;
+      color: #222222;
+    }
+
+    & input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+    &input::-webkit-calendar-picker-indicator {
+      display: none;
+    }
+
+    & > div {
+      border-radius: 2rem;
+      padding: 10px;
+      padding-inline-start: 20px;
+
+      &:hover {
+        background-color: #ebebeb;
+      }
+    }
+    & div:first-child {
+      padding-inline-start: 30px;
+    }
+  }
+}
+.seperator {
+  position: relative;
+  top: 15px;
+  height: 60%;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.loc-input {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.checkin-input,
+.checkout-input {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  span {
+    margin-top: 5px;
+    font-size: 0.68rem;
+    line-height: 12px;
+    color: rgb(108, 108, 108);
+    font-weight: 300;
+  }
+  input {
+    display: none;
+  }
+}
+
+// datepicker
+
+.mx-datepicker-range {
+  position: absolute !important;
+  padding: 0 !important;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-60%);
+  &:hover {
+    background-color: transparent !important;
+  }
+  svg {
+    display: none;
+  }
+  & input.mx-input {
+    box-shadow: none !important;
+    color: transparent !important;
+  }
+}
+
+.mx-range-wrapper {
+  justify-content: space-evenly;
+}
+
+.mx-calendar + .mx-calendar {
+  border: none !important;
+}
+
+.mx-calendar {
+  width: 43% !important;
+}
+.mx-calendar-header {
+  button {
+    color: #222 !important;
+  }
+}
+
+.mx-datepicker-main.mx-datepicker-popup {
+  top: 153px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 90%;
+  height: 393px !important;
+  max-width: 850px;
+  border-radius: 20px;
+  padding: 0.8rem 1.6rem !important;
+  th {
+    color: #222 !important;
+  }
+  tr {
+    margin-bottom: 1px !important;
+  }
+}
+
+td {
+  &.cell {
+    background-color: #fff !important;
+    color: black !important;
+    &.active {
+      border-radius: 50%;
+      background-color: #222 !important;
+      color: #fff !important;
+    }
+    &.in-range {
+      background-color: #ededed !important;
+      width: 120% !important;
+    }
+    & > div {
+      padding: 11px 0;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42.9px !important;
+      height: 42.9px !important;
+      margin-bottom: 3px !important;
+      margin-right: 3px !important;
+      &:hover {
+        border-radius: 50%;
+        box-shadow: 0 0 0 1.2px #222;
+      }
+    }
+  }
+}
+
+// guest
+
+.guests-input {
+  flex: 3;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.guests-modal {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  border-radius: 1.6rem;
+  padding: 0.3rem 1.5rem;
+  background-color: #fff;
+  color: #222;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  & .type {
+    display: flex;
+    gap: 40px;
+    padding: 12px 0 5px;
+    padding-inline-start: 0 !important;
+    border-bottom: 1px solid #ebebeb;
+  }
+  & :last-child {
+    border-bottom: none;
+  }
+  & .details {
+    min-width: 130px;
+    padding: 0 !important;
+  }
+
+  & p {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  & span {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+}
+.Guests-container {
+  padding-inline-start: 0 !important;
+}
+
+.el-input-number {
+  width: 110px;
+  & > span {
+    background-color: #fff;
+    border: 1px solid #b5b5b5;
+    border-radius: 50%;
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    & i {
+      font-size: 0.8rem;
+      font-weight: 900;
+    }
+  }
+}
+
+.search-btn {
+  background-color: #ff385c;
+  width: 50px;
+  height: 52px;
+  border-radius: 50%;
+  & img {
+    width: 25px;
+  }
+  p {
+    display: none;
+  }
+}

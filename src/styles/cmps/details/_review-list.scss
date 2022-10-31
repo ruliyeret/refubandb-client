@@ -1,0 +1,60 @@
+.review-list {
+	margin-bottom: 40px;
+	margin-top: 32px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+
+	.reviews-on-mobile {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+		margin-bottom: 30px;
+	}
+
+	button {
+		max-width: 140px;
+		grid-column: span 2;
+		display: block;
+		border: 1px solid #333;
+		border-radius: 12px;
+		padding: 0.65rem 1.3rem;
+		margin-bottom: 30px;
+		font-size: 0.75rem;
+		font-weight: 500;
+		background-color: #fefefe;
+
+		&:hover {
+			background-color: #eee;
+		}
+	}
+}
+
+@include for-mobile-layout {
+	.review-list {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		gap: 0px;
+		margin-top: 15px;
+		padding-bottom: 0px;
+		margin-bottom: 10px;
+
+		.reviews-on-mobile {
+			display: flex;
+			overflow-x: scroll;
+			position: relative;
+			gap: 0px;
+			left: 50%;
+			transform: translateX(-50%);
+			max-width: 90vw;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+
+		button {
+			margin-bottom: 25px;
+			margin-top: 15px;
+		}
+	}
+}

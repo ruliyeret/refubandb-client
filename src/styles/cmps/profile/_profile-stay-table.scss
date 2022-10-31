@@ -1,0 +1,88 @@
+.profile-stay-table {
+  li {
+    div:first-of-type {
+      width: 220px;
+    }
+    div:nth-of-type(2) {
+      width: 100px;
+    }
+
+    button {
+      width: 100%;
+      padding: 0;
+      height: 30px;
+      margin: 0;
+    }
+    .edit-btn.delete-btn {
+      margin-left: 0;
+      background-color: #fff;
+    }
+
+    .edit-btn:hover,
+    .delete-btn:hover {
+      background-color: #f0f0f0;
+    }
+  }
+}
+
+.actions-td {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  .actionsBtn {
+    background-color: transparent;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.actionsModal {
+  display: flex;
+  max-width: 100px;
+  flex-direction: column;
+  position: absolute;
+  padding: 10px 0;
+  left: 0px;
+  top: 25px;
+  background-color: #fff;
+  box-shadow: 1px solid #ddd;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  width: 50px;
+  z-index: 3;
+  border-radius: 5px;
+  button {
+    background-color: #fff;
+  }
+}
+
+@include for-mobile-layout {
+  .stays-table {
+    width: 100%;
+  }
+  .profile-stay-table {
+    width: 94%;
+    .table-header {
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      & > div {
+        width: 20%;
+        font-size: 0.7rem;
+      }
+      .name {
+        width: 20%;
+      }
+      .city {
+        width: 20%;
+      }
+      .price {
+        width: fit-content;
+      }
+    }
+    .table-row {
+      font-size: 0.7rem;
+    }
+  }
+}

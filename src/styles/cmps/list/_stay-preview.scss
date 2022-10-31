@@ -1,0 +1,106 @@
+.stay-card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  letter-spacing: 0.3px;
+  margin-bottom: 20px;
+  padding: 3px;
+  text-align: left;
+  line-height: 14px;
+  ul {
+    text-align: center;
+  }
+
+  .wishlist-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 3;
+    padding: 1px 5px;
+    background-color: transparent;
+    span {
+      font-size: 1.5rem;
+      color: #fff;
+      &.in-list {
+        color: #ff385c;
+      }
+    }
+  }
+
+  .card-rating {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    p,
+    small {
+      display: flex;
+      align-items: center;
+      letter-spacing: 1px;
+      font-size: 0.68rem;
+    }
+    .card-rate {
+      font-weight: 300;
+      margin-left: 2px;
+    }
+  }
+  .star-icon {
+    color: #ff385c;
+    font-size: 0.9rem;
+    margin-inline-end: 3px;
+  }
+  .card-location {
+    margin-bottom: 6px;
+    font-weight: 300;
+  }
+
+  .card-name {
+    font-weight: 300;
+  }
+
+  .img-carousell {
+    width: 100%;
+  }
+
+  .card-price {
+    span {
+      font-weight: 600;
+    }
+    p {
+      margin-top: 10px;
+      font-weight: 300;
+    }
+  }
+
+  img {
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.el-carousel__button {
+  height: 8px;
+  width: 7px;
+  z-index: 5;
+}
+
+.el-carousel__arrow {
+  z-index: 3;
+}
+
+.isWished {
+  background-color: red;
+}
+
+@include for-mobile-layout {
+  .stay-card-container img {
+    height: 100%;
+  }
+}

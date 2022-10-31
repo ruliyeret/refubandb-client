@@ -1,0 +1,2 @@
+- create test data for presentation
+- QA - go over full user flow in the app (user + host) and check for bugs

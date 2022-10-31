@@ -1,0 +1,30 @@
+.filter-orders {
+  display: flex;
+  gap: 10px;
+}
+
+.name-input.el-input.el-input--suffix {
+  width: 30%;
+}
+
+.el-select.status-input .el-input--suffix,
+div.el-select-dropdown.el-popper {
+  min-width: 0px !important;
+  width: 120px;
+}
+
+.el-input.is-active .el-input__inner,
+.el-input__inner:focus {
+  border-color: #ff385c;
+  outline: 0;
+}
+
+.el-select .el-input.is-focus .el-input__inner,
+.el-select .el-input__inner:focus {
+  border-color: #ff385c;
+}
+
+.el-select-dropdown__item.selected {
+  color: #ff385c;
+  font-weight: 700;
+}

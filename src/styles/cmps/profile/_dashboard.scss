@@ -1,0 +1,115 @@
+.dashboard-container {
+  h2 {
+    margin: 0 0 20px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+
+    .hosting-card {
+      border: 2px solid #cccccccc;
+      border-radius: 5px;
+      padding: 16px;
+      min-width: 300px;
+      line-height: 30px;
+
+      .summary {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #cccccccc;
+      }
+
+      .statistics {
+        .general-info {
+          padding-bottom: 15px;
+          margin-bottom: 15px;
+          border-bottom: 1px solid #cccccccc;
+        }
+      }
+      h3 {
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      h4 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 500;
+        margin-bottom: 5px;
+
+        svg {
+          color: rgb(31, 173, 43);
+          font-size: 1.7rem;
+        }
+      }
+      p {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 300;
+        font-size: 0.9rem;
+        color: rgb(73, 73, 73);
+
+        span {
+          color: rgb(31, 173, 43);
+          font-weight: 400;
+        }
+      }
+      .overall {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .chart {
+    margin-bottom: 40px;
+    width: 800px;
+  }
+}
+
+@include for-mobile-layout {
+  .dashboard-container {
+    .flex-container {
+      flex-direction: column-reverse;
+
+      .hosting-card {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .summary {
+          border: none;
+          padding: 0;
+          margin: 0;
+          margin-right: 3rem;
+        }
+
+        .statistics {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          span {
+            margin-left: 15px;
+          }
+
+          .general-info {
+            margin-right: 3rem;
+            border: none;
+          }
+
+          .general-details {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+  .chart {
+    margin-bottom: 40px;
+    width: 600px !important;
+  }
+}

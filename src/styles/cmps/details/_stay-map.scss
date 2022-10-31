@@ -1,0 +1,36 @@
+.stay-map {
+  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  margin-bottom: 50px;
+  padding-bottom: 80px;
+
+  h2 {
+    font-size: 1.1rem !important;
+  }
+  p {
+    margin: 20px 0;
+    color: #333;
+    font-size: 0.8rem !important;
+    font-weight: 300 !important;
+  }
+}
+
+@include for-mobile-layout {
+  .vue-map,
+  .vue-map-container {
+    max-height: 250px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  .stay-map {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    .vue-map-container {
+      max-height: 250px;
+    }
+  }
+}
